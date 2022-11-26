@@ -1,0 +1,19 @@
+{
+    "email":"aliaa+qahrmanager@workmotion.com",
+    "password":"Test1234",
+    "country":"Egypt",
+    "firstName":"Asmaa",
+    "lastName" : "Mohamed",
+    "title": "Test Automation Engineer",
+    "description":"kkckkckck",
+    "address":"7th Zakaria Ghonim, Gest El Suez , Cairo",
+    "costCenter":"identity",
+    "timeOff":50,
+    "probationPeriod":3,
+    "terminationPeriod":2,
+    "talentemail":"testllmail",
+    "salary":1450,
+    "bonus":100,
+    "talentStatus" :"ONBOARDING"
+
+}
