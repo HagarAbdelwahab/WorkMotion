@@ -1,42 +1,40 @@
 const locators = require("../fixtures/locators.json");
 const userDetails = require("../fixtures/userDetails.json");
 import "cypress-file-upload";
-export class EmploymentAgreementDetails {
-  fillInEmployeeDetails() {
-    //type in talent first name
-    cy.get(locators.firstName, {
-      timeout: 6000,
-    }).type(userDetails.firstName);
-    //type in talent last name
-    cy.get(locators.lastName).type(userDetails.lastName);
-    //type in eligeibl to work in country
-    cy.get(locators.eligibiltyToWorkInThisCountry).click();
-    //type in executive
-    cy.get(locators.talentLevel).click();
-    // job title
-    cy.get(locators.talentTitle).type(userDetails.title);
-    //job description
-    cy.get(locators.talentDescription).type(userDetails.description);
+export function fillInEmployeeDetails() {
+  //type in talent first name
+  cy.get(locators.firstName, {
+    timeout: 60000,
+  }).type(userDetails.firstName);
+  //type in talent last name
+  cy.get(locators.lastName).type(userDetails.lastName);
+  //type in eligeibl to work in country
+  cy.get(locators.eligibiltyToWorkInThisCountry).click();
+  //type in executive
+  cy.get(locators.talentLevel).click();
+  // job title
+  cy.get(locators.talentTitle).type(userDetails.title);
+  //job description
+  cy.get(locators.talentDescription).type(userDetails.description);
 
-    const p = "QA_Assessment.docx";
-    //upload file with attachFile
-    cy.get(locators.talentAttachedResume).attachFile(p, {
-      subjectType: "drag-n-drop",
-    });
+  const p = "QA_Assessment.docx";
+  //upload file with attachFile
+  cy.get(locators.talentAttachedResume).attachFile(p, {
+    subjectType: "drag-n-drop",
+  });
 
-    //contract type
-    cy.get(locators.contractType).click();
+  //contract type
+  cy.get(locators.contractType).click();
 
-    cy.get(locators.startDate).type(getStartDate()).type("{enter}");
+  cy.get(locators.startDate).type(getStartDate()).type("{enter}");
 
-    cy.get(locators.eligibiltyToWorkFromThisCountry).click();
+  cy.get(locators.eligibiltyToWorkFromThisCountry).click();
 
-    cy.get(locators.talentAddress).type(userDetails.address);
+  cy.get(locators.talentAddress).type(userDetails.address);
 
-    cy.get(locators.costCenter).type(userDetails.costCenter);
+  cy.get(locators.costCenter).type(userDetails.costCenter);
 
-    cy.get(locators.continue).click();
-  }
+  cy.get(locators.continue).click();
 }
 
 function getStartDate() {
