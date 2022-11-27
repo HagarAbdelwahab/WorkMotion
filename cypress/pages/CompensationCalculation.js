@@ -1,21 +1,20 @@
 const locators = require("../fixtures/locators.json");
 const userDetails = require("../fixtures/userDetails.json");
 export function calculateCompensation() {
-  //compensation calc
+  cy.log("Talent to provide ESOP");
   cy.get(locators.talentToProvideESOP).click();
-
+  cy.log("Add gross salary for the talent");
   cy.get(locators.grossSalary).type(userDetails.salary);
 
-  //bonus eligibilty
+  cy.log("Enable the bonus for the talent");
   cy.get(locators.bounsEligibilty).click();
 
-  //bonus calc
+  cy.log("Give the talent a bonus of " + userDetails.bonus);
   cy.get(locators.bonusAmount).type(userDetails.bonus);
 
-  //bonus freq
-  //cy.get(".css-1hwfws3").click();
+  cy.log("Give the talent a buns on monthly basis");
   cy.get(locators.bounsFrequncy).type("monthly{enter}");
 
-  //continue
+  cy.log('click "continue" button');
   cy.get(locators.continue).click();
 }
