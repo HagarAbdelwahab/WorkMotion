@@ -10,7 +10,7 @@ import {
   validateTalentStatusIsOnBoarding,
 } from "../pages/ServiceAgreement";
 
-it("add a new talent", () => {
+it("add a new talent and asserting the the status of him is 'on boarding", () => {
   const locators = require("../fixtures/locators.json");
   const userDetails = require("../fixtures/userDetails.json");
 
