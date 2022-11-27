@@ -19,5 +19,4 @@ export function fillInContractClauses() {
 
   //continue
   cy.get(locators.continue).click();
-  cy.screenshot();
 }

@@ -45,7 +45,8 @@
     "talentIcon":"[data-cy=sidebar-talents-link]",
     "closeMenuIcon" : "[data-testid='CloseIcon'] > path",
     "searchFilter":"[data-cy=talents-search-filter-input]",
-    "talentStatus":"[data-cy=talents-status-cell]" 
+    "talentStatus":"[data-cy=talents-status-cell]" ,
+    "filteredTalents": ":nth-child(1) > :nth-child(5) > [data-cy=talents-status-cell]"
 
 
 
