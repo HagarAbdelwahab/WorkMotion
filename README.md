@@ -21,6 +21,6 @@ Page Object Model Classes :
 
 
 
-##Setups : 
+## Setup : 
 Run `npx cypress open`
 
