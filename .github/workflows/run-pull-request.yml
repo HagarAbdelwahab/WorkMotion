@@ -1,0 +1,16 @@
+name: this is to trigger the workflow for a pull request 
+
+on:
+  push:
+    branches:
+      'hagar/*'
+jobs:
+  run the test 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.0
+
+      - name: RunMavenTest
+        uses: Maes95/maven-action@1.1.0
