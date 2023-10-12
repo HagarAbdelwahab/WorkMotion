@@ -5,7 +5,7 @@ on:
     branches:
       'hagar/*'
 jobs:
-  run the test 
+  run-the-test: 
     runs-on: ubuntu-latest
 
     steps:
