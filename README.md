@@ -1,3 +1,6 @@
+[![.github/workflows/pull-requests.yml](https://github.com/HagarAbdelwahab/cypress_task/actions/workflows/pull-requests.yml/badge.svg)](https://github.com/HagarAbdelwahab/cypress_task/actions/workflows/pull-requests.yml)
+
+
 # Project : WorkMotion 
 
 ## Description : 
